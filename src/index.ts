@@ -217,6 +217,7 @@ export class LinkedInProfileScraper {
 
       this.browser = await puppeteer.launch({
         headless: this.options.headless,
+        executablePath: '/opt/homebrew/bin/chromium',
         args: [
           ...(this.options.headless ? '---single-process' : '---start-maximized'),
           '--no-sandbox',
